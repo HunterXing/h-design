@@ -1,0 +1,65 @@
+{
+  "name": "h-design",
+  "version": "0.1.1",
+  "private": false,
+  "main": "lib/h-design.js",
+  "module": "es/h-design.js",
+  "style": "lib/styles/index.css",
+  "files": [
+    "lib",
+    "es",
+    "packages"
+  ],
+  "publisher": "xingheng@tom.com",
+  "keywords": [
+    "vuejs",
+    "vue3",
+    "ui组件"
+  ],
+  "author": "xingheng",
+  "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/HunterXing/h-design.git"
+  },
+  "homepage": "https://github.com/HunterXing/h-design",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "lib": "rm -rf es && rm -rf lib && rollup -c && npm run lib:css",
+    "lib:css": "cd packages/styles && npm run build",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "highlight.js": "11.2.0",
+    "vue": "^3.2.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@vuepress/bundler-vite": "^2.0.0-beta.26",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.26",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "rollup": "^2.57.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "vuepress": "^2.0.0-beta.26"
+  }
+}

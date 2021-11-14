@@ -1,0 +1,184 @@
+/*
+ * @description: 常用动画
+ * @Date: 2021-11-14 17:22:04
+ * @LastEditTime: 2021-11-14 21:28:09
+ * @Author: xingheng
+ */
+
+
+@import './var';
+
+@keyframes h-slide-up-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes h-slide-up-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes h-slide-down-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes h-slide-down-leave {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes h-slide-left-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes h-slide-left-leave {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes h-slide-right-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes h-slide-right-leave {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes h-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes h-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes h-swing-top-in {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+@keyframes h-swing-top-out {
+  0% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+}
+
+@keyframes h-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.h-fade {
+  &-enter-active {
+    animation: h-fade-in $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: h-fade-out $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.h-slide-up {
+  &-enter-active {
+    animation: h-slide-up-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: h-slide-up-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.h-slide-down {
+  &-enter-active {
+    animation: h-slide-down-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: h-slide-down-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.h-slide-left {
+  &-enter-active {
+    animation: h-slide-left-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: h-slide-left-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.h-slide-right {
+  &-enter-active {
+    animation: h-slide-right-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: h-slide-right-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.h-swing-top {
+  &-enter-active {
+    animation: h-swing-top-in $animation-duration-base both
+      cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &-leave-active {
+    animation: h-swing-top-out $animation-duration-base both
+      cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+}

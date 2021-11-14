@@ -1,0 +1,176 @@
+@use './common/var' as *;
+@use './mixins/mixins' as *;
+
+
+
+$button-background-color: $gray-3;
+// type minxin
+@mixin type-styl($type-color) {
+  border-color: $type-color;
+  color: $white;
+  background: $type-color;
+  &:active {
+    border-color: darken($type-color, 10%);
+    background: darken($type-color, 10%);
+  }
+  > .h-button__indicator {
+    border-color: $white $white $white transparent;
+  }
+}
+
+.h-button {
+  position: relative;
+  display: xinline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-md;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color, border-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  outline: none;
+  user-select: none;
+  & + & {
+    margin-left: 10px;
+  }
+
+  &__indicator {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $text-color $text-color $text-color transparent;
+    border-style: solid;
+    border-width: 1px;
+    animation: button-loading-spin 1s infinite linear;
+  }
+
+  &:active {
+    font-weight: $font-weight-bold;
+    background-color: $button-background-color;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: $disabled-opacity;
+    pointer-events: none;
+  }
+
+  &--round {
+    border-radius: 25px;
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+    .h-button + & {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  &--loading {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  &--primary {
+    @include type-styl($primary-color);
+  }
+  &--success {
+    @include type-styl($success-color);
+  }
+  &--warning {
+    @include type-styl($warning-color);
+  }
+  &--danger {
+    @include type-styl($danger-color);
+  }
+  &--info {
+    @include type-styl($info-color);
+  }
+
+  // plain
+  &--plain {
+    border-color: lighten($text-color,70%);
+    color: $text-color;
+    background-color: transparent;
+    &:active {
+      background-color: $button-background-color;
+    }
+
+    @mixin plain-styl($type-color) {
+      border-color: $type-color;
+      color: $type-color;
+      > .h-button__indicator {
+        border-color: $type-color $type-color $type-color transparent;
+      }
+    }
+
+    &.h-button--primary {
+      @include plain-styl($primary-color);
+    }
+    &.h-button--success {
+      @include plain-styl($success-color);
+    }
+    &.h-button--warning {
+      @include plain-styl($warning-color);
+    }
+    &.h-button--danger {
+      @include plain-styl($danger-color);
+    }
+    &.h-button--info {
+      @include plain-styl($info-color);
+    }
+  }
+
+  // size
+  &-size--mini {
+    height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+    border-radius: $border-radius-sm;
+    > .h-button__indicator {
+      width: 10px;
+      height: 10px;
+      margin-right: 2px;
+    }
+    &.h-button--loading {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+  }
+
+  &-size--medium {
+    height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    &.h-button--loading {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+  }
+
+  &-size--large {
+    height: 45px;
+    font-size: $font-size-lg;
+  }
+
+  // keyframes
+  @keyframes button-loading-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
