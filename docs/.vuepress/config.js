@@ -9,7 +9,7 @@ module.exports = {
   lang: 'zh-CN',
   title: 'h-design',
   description: 'a Vue 3.x based component library for developers',
-  bundler: isProduction ? '@vuepress/webpack' : '@vuepress/vite',
+  bundler: '@vuepress/vite',
   head: [
     [
       'meta',
