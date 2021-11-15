@@ -1,7 +1,7 @@
 /*
  * @description: Normalize 使浏览器呈现所有 HTML 元素更加一致，并且符合现代 web 标准。Normalize.css 只作用于需要规范化的样式。
  * @Date: 2021-11-14 17:22:04
- * @LastEditTime: 2021-11-14 17:23:01
+ * @LastEditTime: 2021-11-15 23:01:39
  * @Author: xingheng
  */
 
@@ -54,7 +54,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: $font-size-md;
   font-weight: $font-weight-regular;
 }
 

@@ -1,0 +1,21 @@
+$width-grid_gutter: 'px'; // 默认槽宽度
+
+.h-row {
+  display: flex;
+  flex-wrap: wrap;
+  &--justify__start {
+    justify-content: flex-start;
+  }
+  &--justify__end {
+    justify-content: flex-end;
+  }
+  &--justify__center {
+    justify-content: center;
+  }
+  &--justify__around {
+    justify-content: space-around;
+  }
+  &--justify__between {
+    justify-content: space-between;
+  }
+}

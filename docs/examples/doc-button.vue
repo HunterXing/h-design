@@ -1,7 +1,7 @@
 <template>
   <div>
     <doc-example :code="code">
-      <div>
+      <h-row gutter-v="5px">
         <h-button>默认按钮</h-button>
         <h-button type="primary">主要按钮</h-button>
         <h-button type="success">成功按钮</h-button>
@@ -9,9 +9,8 @@
         <h-button type="danger">危险按钮</h-button>
         <h-button type="primary" disabled>禁用</h-button>
         <h-button type="primary" loading>加载中</h-button>
-      </div>
-      <br>
-      <div>
+      </h-row>
+      <h-row gutter-v="5px">
         <h-button plain>朴素按钮</h-button>
         <h-button type="primary" plain>主要按钮</h-button>
         <h-button type="success" plain>成功按钮</h-button>
@@ -19,9 +18,8 @@
         <h-button type="danger" plain>危险按钮</h-button>
         <h-button type="primary" disabled plain>禁用</h-button>
         <h-button type="primary" loading plain>加载中</h-button>
-      </div>
-      <br>
-      <div>
+      </h-row>
+      <h-row gutter-v="5px">
         <h-button round>圆角按钮</h-button>
         <h-button type="primary" round>主要按钮</h-button>
         <h-button type="success" round>成功按钮</h-button>
@@ -29,18 +27,10 @@
         <h-button type="danger" round>危险按钮</h-button>
         <h-button type="primary" disabled round>禁用</h-button>
         <h-button type="primary" loading round>加载中</h-button>
-      </div>
-      <br>
-       <div>
-        <h-button type="info" size="mini">mini按钮</h-button>
-        <h-button type="info" size="medium">正常按钮</h-button>
-        <h-button type="info">中等按钮</h-button>
-        <h-button type="info" size="large">大按钮</h-button>
-      </div>
-      <br>
-       <div>
+      </h-row>
+      <h-row gutter-v="5px">
         <h-button type="primary" block>块状按钮</h-button>
-      </div>
+      </h-row>
 
     </doc-example>
   </div>
@@ -48,40 +38,39 @@
 
 <script setup>
 import HButton from 'packages/Button/h-button.vue';
-import 'packages/styles/src/button.scss';
+import HRow from 'packages/Row/h-row.vue';
+// import HCol from 'packages/Col/h-col.vue';
+import 'packages/styles/src/index.scss';
 
 const code = `
-      <div>
-        <h-button>默认按钮</h-button>
-        <h-button type="primary">主要按钮</h-button>
-        <h-button type="success">成功按钮</h-button>
-        <h-button type="info">信息按钮</h-button>
-        <h-button type="danger">危险按钮</h-button>
-        <h-button type="primary" disabled>禁用</h-button>
-        <h-button type="primary" loading>加载中</h-button>
-      </div>
-      <br>
-      <div>
-        <h-button plain>朴素按钮</h-button>
-        <h-button type="primary" plain>主要按钮</h-button>
-        <h-button type="success" plain>成功按钮</h-button>
-        <h-button type="info" plain>信息按钮</h-button>
-        <h-button type="danger" plain>危险按钮</h-button>
-        <h-button type="primary" disabled plain>禁用</h-button>
-        <h-button type="primary" loading plain>加载中</h-button>
-      </div>
-      <br>
-      <div>
-        <h-button round>圆角按钮</h-button>
-        <h-button type="primary" round>主要按钮</h-button>
-        <h-button type="success" round>成功按钮</h-button>
-        <h-button type="info" round>信息按钮</h-button>
-        <h-button type="danger" round>危险按钮</h-button>
-        <h-button type="primary" disabled round>禁用</h-button>
-        <h-button type="primary" loading round>加载中</h-button>
-      </div>
-      <br>
-      <div>
-        <h-button type="primary" block>块状按钮</h-button>
-      </div>`;
+  <h-row gutter-v="5px">
+    <h-button>默认按钮</h-button>
+    <h-button type="primary">主要按钮</h-button>
+    <h-button type="success">成功按钮</h-button>
+    <h-button type="info">信息按钮</h-button>
+    <h-button type="danger">危险按钮</h-button>
+    <h-button type="primary" disabled>禁用</h-button>
+    <h-button type="primary" loading>加载中</h-button>
+  </h-row>
+  <h-row gutter-v="5px">
+    <h-button plain>朴素按钮</h-button>
+    <h-button type="primary" plain>主要按钮</h-button>
+    <h-button type="success" plain>成功按钮</h-button>
+    <h-button type="info" plain>信息按钮</h-button>
+    <h-button type="danger" plain>危险按钮</h-button>
+    <h-button type="primary" disabled plain>禁用</h-button>
+    <h-button type="primary" loading plain>加载中</h-button>
+  </h-row>
+  <h-row gutter-v="5px">
+    <h-button round>圆角按钮</h-button>
+    <h-button type="primary" round>主要按钮</h-button>
+    <h-button type="success" round>成功按钮</h-button>
+    <h-button type="info" round>信息按钮</h-button>
+    <h-button type="danger" round>危险按钮</h-button>
+    <h-button type="primary" disabled round>禁用</h-button>
+    <h-button type="primary" loading round>加载中</h-button>
+  </h-row>
+  <h-row gutter-v="5px">
+    <h-button type="primary" block>块状按钮</h-button>
+  </h-row>`;
 </script>

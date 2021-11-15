@@ -65,7 +65,10 @@ module.exports = {
       '/components/': [
         {
           text: '基础组件',
-          children: ['/components/basic/button.md']
+          children: [
+            '/components/basic/grid.md',
+            '/components/basic/button.md'
+          ]
         }
       ]
     }
