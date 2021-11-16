@@ -1,4 +1,6 @@
-# h-ui
+# h-design
+[![visitors](https://visitor-badge.laobi.icu/badge?page_id=hunterxing.h-design)](https://github.com/hunterxing/h-design.git)
+[![npm](https://img.shields.io/npm/dt/h-design?label=h-design&logo=npm)](https://www.npmjs.com/package/h-design)
 ## 组件介绍
 > h-design 是一款基于 Vue3的UI组件库。
 > **此组件库用于学习使用，不建议搭建用于开发环境**，希望同道中人让这个项目能真正用起来。

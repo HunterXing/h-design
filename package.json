@@ -1,6 +1,6 @@
 {
   "name": "h-design",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "private": false,
   "main": "lib/h-design.js",
   "module": "es/h-design.js",
@@ -32,7 +32,7 @@
     "lint": "vue-cli-service lint",
     "docs:dev": "cd docs/ && npm run docs:dev",
     "docs:build": "cd docs/ && npm run docs:build",
-    "deploy": "cd docs/ && npm run docs:deploy"
+    "deploy": "npm run lib && npm publish && cd docs/ && npm run docs:deploy"
   },
   "dependencies": {
     "core-js": "^3.6.5",
