@@ -49,7 +49,7 @@ module.exports = {
       { text: '指南', link: '/' },
       {
         text: '组件',
-        link: '/components/basic/button',
+        link: '/components/basic/grid',
         activeMatch: '/components/'
       },
       { text: '邢走在云端', link: 'https://xingheng.gitee.io/' }

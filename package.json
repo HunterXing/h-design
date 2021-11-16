@@ -30,7 +30,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "vuepress build docs && node deploy.doc.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

@@ -21,7 +21,7 @@ yarn doc:dev
 ### 开发进度
 #### 基础组件
 - [x]  button 按钮组件
-- [ ]  row/col 布局组件
+- [x]  row/col 布局组件
 
 #### 输入/选择组件
 - [ ]  input
@@ -52,6 +52,8 @@ yarn doc:dev
 ├─docs                  // vuepress 文档
 ├─packages              // 组件库源码目录
 │  ├─Button             // 按钮组件
+│  ├─Row                // 布局组件Row
+│  ├─Col                // 布局组件Col
 │  ├─...
 │  ├─hooks              
 │  ├─styles             // 样式文件目录
