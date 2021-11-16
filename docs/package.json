@@ -1,0 +1,23 @@
+{
+  "name": "h-design-doc",
+  "version": "1.0.0",
+  "description": "h-design 的文档",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev",
+    "docs:build": "vuepress build",
+    "docs:deploy": "vuepress build && node deploy.doc.js"
+  },
+  "author": "xingheng",
+  "license": "ISC",
+  "dependencies": {
+    "highlight.js": "11.2.0"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-beta.26",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.26",
+    "vuepress": "^2.0.0-beta.26"
+  }
+}
