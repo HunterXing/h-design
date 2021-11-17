@@ -10,34 +10,34 @@ import commonjs from 'rollup-plugin-commonjs';
 // not comps files
 const NOT_COMPS = ['index.js', 'utils', 'hooks', 'styles'];
 
-// sync comps files
+// 筛选出需要打包的组件
 let comps = fs.readdirSync('./packages');
 comps = comps.filter((v) => !NOT_COMPS.includes(v));
 
 // format by { input: 'packages/Button/index.js', name: 'h-button' }
+// 此处输出的是单独的组件的包，为了按需引入
 const inputComps = comps.map((fileName) => ({
   input: `packages/${fileName}/index.js`,
   name: `h${fileName.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
 }));
 
-// default comps
+// 这是整个大的包
 const defaultComps = [{ input: 'packages/index.js', name: 'h-design' }];
-
-const inputs = defaultComps.concat(inputComps);
-console.debug(inputs);
+// 将要打包输出的组件
+const inputs = [...defaultComps, ...inputComps];
 
 // rollup config
-export default inputs.map((item) => ({
-  input: path.resolve(__dirname, item.input),
+export default inputs.map((com) => ({
+  input: path.resolve(__dirname, com.input), // 输入
   output: [
     {
-      name: item.name,
-      file: `es/${item.name}.js`,
-      format: 'esm',
+      name: com.name,
+      file: `es/${com.name}.js`,
+      format: 'esm', //  五种输出格式：amd / esm / iife / umd / cjs / system
     },
     {
-      name: item.name,
-      file: `lib/${item.name}.js`,
+      name: com.name,
+      file: `lib/${com.name}.js`,
       format: 'cjs',
       exports: 'named',
     },
@@ -53,5 +53,5 @@ export default inputs.map((item) => ({
     nodeResolve(),
     esbuild(),
   ],
-  external: ['vue'],
+  external: ['vue', 'core-js'], // 告诉rollup不要将这些依赖打包，而作为外部依赖
 }));
