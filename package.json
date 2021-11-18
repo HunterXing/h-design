@@ -1,6 +1,6 @@
 {
   "name": "h-design",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "private": false,
   "main": "lib/h-design.js",
   "module": "es/h-design.js",
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/HunterXing/h-design",
   "scripts": {
-    "installall": "npm install && cd docs/ && npm install",
+    "installall": "npm install && cd docs/ && npm install && cd ../packages/styles && npm install",
     "serve": "vue-cli-service serve",
     "lib": "rm -rf es && rm -rf lib && rollup -c && npm run lib:css",
     "lib:css": "cd packages/styles && npm run build",

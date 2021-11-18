@@ -6,7 +6,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import vue from 'rollup-plugin-vue';
 import scss from 'rollup-plugin-scss';
 import commonjs from 'rollup-plugin-commonjs';
-
+import { terser } from 'rollup-plugin-terser';
 // not comps files
 const NOT_COMPS = ['index.js', 'utils', 'hooks', 'styles'];
 
@@ -52,6 +52,7 @@ export default inputs.map((com) => ({
     commonjs(),
     nodeResolve(),
     esbuild(),
+    terser(),
   ],
   external: ['vue', 'core-js'], // 告诉rollup不要将这些依赖打包，而作为外部依赖
 }));
