@@ -7,22 +7,23 @@ import vue from 'rollup-plugin-vue';
 import scss from 'rollup-plugin-scss';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
+import typescript from '@rollup/plugin-typescript';
 // not comps files
-const NOT_COMPS = ['index.js', 'utils', 'hooks', 'styles'];
+const NOT_COMPS = ['index.ts', 'shims-vue.d.ts'];
 
 // 筛选出需要打包的组件
-let comps = fs.readdirSync('./packages');
+let comps = fs.readdirSync('./packages/components');
 comps = comps.filter((v) => !NOT_COMPS.includes(v));
 
-// format by { input: 'packages/Button/index.js', name: 'h-button' }
+// format by { input: 'packages/components/Button/index.js', name: 'h-button' }
 // 此处输出的是单独的组件的包，为了按需引入
 const inputComps = comps.map((fileName) => ({
-  input: `packages/${fileName}/index.js`,
+  input: `packages/components/${fileName}/index.ts`,
   name: `h${fileName.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
 }));
 
 // 这是整个大的包
-const defaultComps = [{ input: 'packages/index.js', name: 'h-design' }];
+const defaultComps = [{ input: 'packages/components/index.ts', name: 'h-design' }];
 // 将要打包输出的组件
 const inputs = [...defaultComps, ...inputComps];
 
@@ -32,13 +33,8 @@ export default inputs.map((com) => ({
   output: [
     {
       name: com.name,
-      file: `es/${com.name}.js`,
-      format: 'esm', //  五种输出格式：amd / esm / iife / umd / cjs / system
-    },
-    {
-      name: com.name,
       file: `lib/${com.name}.js`,
-      format: 'cjs',
+      format: 'cjs', //  输出格式：amd / esm / iife / umd / cjs / system
       exports: 'named',
     },
   ],
@@ -52,6 +48,7 @@ export default inputs.map((com) => ({
     commonjs(),
     nodeResolve(),
     esbuild(),
+    typescript(),
     terser(),
   ],
   external: ['vue', 'core-js'], // 告诉rollup不要将这些依赖打包，而作为外部依赖

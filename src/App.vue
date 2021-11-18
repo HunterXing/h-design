@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { HButton, HRow, HCol } from '../packages/index';
+import { HButton, HRow, HCol } from '../packages/styles/node_modules/index';
 import '../lib/styles/index.css';
 
 export default {
