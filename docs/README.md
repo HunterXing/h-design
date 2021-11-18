@@ -2,9 +2,8 @@
 sidebarDepth: 3
 ---
 
-# h-design
-
-> h-design 是一款基于 Vue3的UI组件库。
+# <div data-nosnippet="true">h-design <img src="https://static.npmjs.com/255a118f56f5346b97e56325a1217a16.svg" height="20px" title="This package contains built-in TypeScript declarations" alt="TypeScript icon, indicating that this package has built-in type declarations" class="aa30d277 pl3" data-nosnippet="true"></div>
+> h-design 是一款基于 Vue3的UI组件库。🎈使用Typescript编写。
 > **此组件库用于学习使用，不建议搭建用于开发环境**，希望同道中人让这个项目能真正用起来。
 
 H-design, a Vue 3.x based component library for developers

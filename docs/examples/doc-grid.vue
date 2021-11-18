@@ -28,8 +28,8 @@
 </template>
 
 <script setup>
-import HRow from 'packages/Row/h-row.vue';
-import HCol from 'packages/Col/h-col.vue';
+import HRow from 'packages/components/Row/h-row.vue';
+import HCol from 'packages/components/Col/h-col.vue';
 import 'packages/styles/src/index.scss';
 
 const code = `

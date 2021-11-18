@@ -37,8 +37,8 @@
 </template>
 
 <script setup>
-import HButton from 'packages/Button/h-button.vue';
-import HRow from 'packages/Row/h-row.vue';
+import HButton from 'packages/components/Button/h-button.vue';
+import HRow from 'packages/components/Row/h-row.vue';
 // import HCol from 'packages/Col/h-col.vue';
 import 'packages/styles/src/index.scss';
 
