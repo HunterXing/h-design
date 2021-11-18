@@ -13,7 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps, defineEmits } from 'vue';
+import {
+  computed, defineProps, defineEmits,
+} from 'vue';
 
 const props = defineProps({
   loading: { type: Boolean, default: false },
@@ -36,7 +38,7 @@ const classes = computed(() => ({
   'h-button--loading': props.loading,
 }));
 
-const handleClick = (event: MouseEvent): void => {
+const handleClick = (event): void => {
   if (props.disabled || props.loading) return;
   emit('click', event);
 };

@@ -1,6 +1,6 @@
-import HButton from './Button';
-import HRow from './Row';
-import HCol from './Col';
+import HButton from './Button/index';
+import HRow from './Row/index';
+import HCol from './Col/index';
 
 const components = {
   HButton,
@@ -16,7 +16,7 @@ const install = (Vue) => {
   });
 };
 
-const HUI = { install };
+const HDesign = { install };
 export {
   install,
   HButton,
@@ -24,4 +24,4 @@ export {
   HCol,
 };
 
-export default HUI;
+export default HDesign;
