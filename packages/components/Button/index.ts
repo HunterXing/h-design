@@ -1,6 +1,2 @@
-import HButton from './h-button.vue';
-
-HButton.install = (app) => {
-  app.component('HButton', HButton);
-};
+import HButton from "./h-button.vue";
 export default HButton;

@@ -1,6 +1,7 @@
-import HButton from './Button/index';
-import HRow from './Row/index';
-import HCol from './Col/index';
+import HButton from "./Button/index";
+import HRow from "./Row/index";
+import HCol from "./Col/index";
+import { DefineComponent } from "vue";
 
 const components = {
   HButton,
@@ -8,7 +9,7 @@ const components = {
   HCol,
 };
 
-const install = (Vue) => {
+const install = (Vue: DefineComponent): void => {
   const keys = Object.keys(components);
   keys.forEach((name) => {
     const component = components[name];
@@ -17,11 +18,6 @@ const install = (Vue) => {
 };
 
 const HDesign = { install };
-export {
-  install,
-  HButton,
-  HRow,
-  HCol,
-};
+export { install, HButton, HRow, HCol };
 
 export default HDesign;

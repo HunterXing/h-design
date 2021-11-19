@@ -1,5 +1,4 @@
 <template>
-<div>
   <h-row gutter-v="5px">
     <h-button>默认按钮</h-button>
     <h-button type="primary">主要按钮</h-button>
@@ -52,21 +51,11 @@
       <div class="grid-content bg-gray-drak">4</div>
     </h-col>
   </h-row>
-</div>
 </template>
 
-<script>
-import { HButton, HRow, HCol } from '../packages/styles/node_modules/index';
-import '../lib/styles/index.css';
-
-export default {
-  name: 'App',
-  components: {
-    HButton,
-    HRow,
-    HCol,
-  },
-};
+<script lang="ts" setup>
+import { HButton, HRow, HCol } from "../lib/h-design";
+import "../lib/styles/index.css";
 </script>
 
 <style>
@@ -75,7 +64,7 @@ export default {
   text-align: center;
 }
 .bg-gray-drak {
-  background: #D4DCE6;
+  background: #d4dce6;
 }
 .bg-gray {
   background: #c6c5c5;

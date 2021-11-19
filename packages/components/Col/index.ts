@@ -1,6 +1,2 @@
-import HCol from './h-col.vue';
-
-HCol.install = (app) => {
-  app.component('HCol', HCol);
-};
+import HCol from "./h-col.vue";
 export default HCol;

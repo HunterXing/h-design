@@ -13,9 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  computed, defineProps, defineEmits,
-} from 'vue';
+import { computed, defineProps, defineEmits } from "vue";
 
 const props = defineProps({
   loading: { type: Boolean, default: false },
@@ -27,19 +25,18 @@ const props = defineProps({
   size: String,
 });
 
-const emit = defineEmits(['click']);
+const emit = defineEmits(["click"]);
 
 const classes = computed(() => ({
   [`h-button--${props.type}`]: props.type,
   [`h-button-size--${props.size}`]: props.size,
-  'h-button--plain': props.plain,
-  'h-button--round': props.round,
-  'h-button--block': props.block,
-  'h-button--loading': props.loading,
+  "h-button--plain": props.plain,
+  "h-button--round": props.round,
+  "h-button--block": props.block,
+  "h-button--loading": props.loading,
 }));
-
-const handleClick = (event): void => {
+const handleClick = (event) => {
   if (props.disabled || props.loading) return;
-  emit('click', event);
+  emit("click", event);
 };
 </script>

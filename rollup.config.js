@@ -9,7 +9,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 // not comps files
-const NOT_COMPS = ['index.ts', 'shims-vue.d.ts'];
+const NOT_COMPS = ['index.ts', 'vue-shim.d.ts'];
 
 // 筛选出需要打包的组件
 let comps = fs.readdirSync('./packages/components');
