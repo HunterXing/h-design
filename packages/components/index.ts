@@ -1,12 +1,14 @@
 import HButton from "./Button/index";
 import HRow from "./Row/index";
 import HCol from "./Col/index";
+import HInput from "./Input/index";
 import { DefineComponent } from "vue";
 
 const components = {
   HButton,
   HRow,
   HCol,
+  HInput,
 };
 
 const install = (Vue: DefineComponent): void => {
@@ -18,6 +20,6 @@ const install = (Vue: DefineComponent): void => {
 };
 
 const HDesign = { install };
-export { install, HButton, HRow, HCol };
+export { install, HButton, HRow, HCol, HInput };
 
 export default HDesign;

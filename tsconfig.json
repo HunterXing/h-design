@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "lib": ["es6"],
+    "lib": ["es6", "dom"],
     "module": "esnext",
     "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "allowJs": true
+    "allowJs": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "exclude": ["node_modules/**"],
   "include": ["packages/components/**/*", "vue-shim.d.ts"],

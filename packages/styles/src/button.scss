@@ -1,6 +1,4 @@
-@use './common/var' as *;
-@use './mixins/mixins' as *;
-
+@import './base.scss';
 
 $button-background-color: $gray-3;
 // type minxin

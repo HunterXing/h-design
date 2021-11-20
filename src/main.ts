@@ -1,4 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-
-createApp(App).mount("#app");
+import HDesign from "./../lib/h-design";
+import "../lib/styles/index.css";
+createApp(App).use(HDesign).mount("#app");
