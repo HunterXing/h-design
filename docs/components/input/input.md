@@ -1,5 +1,5 @@
 ---
-title: Button input
+title: input 输入框
 sidebarDepth: 0
 ---
 

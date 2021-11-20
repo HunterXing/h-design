@@ -1,14 +1,18 @@
 <template>
-  <div class="h-input input-group" v-if="['text', 'password', 'number'].includes(type)">
+  <div
+    class="h-input-group"
+    :class="inputClass"
+    v-if="['text', 'password', 'number'].includes(type)"
+  >
     <template v-if="$slots.prepend">
-      <span class="input-group-text">
+      <span class="h-input-group-text">
         <slot name="prepend"></slot>
       </span>
     </template>
     <input
+      class="h-input"
+      autocomplete="off"
       :value="modelValue"
-      class="form-control"
-      :class="inputClass"
       :type="type"
       :placeholder="placeholder"
       :disabled="disabled"
@@ -20,16 +24,17 @@
       @keypress="handleKeyPress"
     />
     <template v-if="$slots.append">
-      <span class="input-group-text">
+      <span class="h-input-group-text">
         <slot name="append"></slot>
       </span>
     </template>
   </div>
-  <div v-else>
+  <div class="input-textarea-wrap" v-else>
     <textarea
       :value="modelValue"
-      class="form-control"
+      class="h-input"
       :type="type"
+      autocomplete="off"
       :placeholder="placeholder"
       :disabled="disabled"
       :readonly="readonly"
@@ -77,26 +82,21 @@ export default defineComponent({
     };
     // datas
     const inputClass = computed(() => ({
-      [`input-group-${sizeClass[props.size]}`]: sizeClass[props.size],
+      [`h-input-group-${sizeClass[props.size]}`]: sizeClass[props.size],
     }));
     // funcs
 
     // methods
     const handleInput = (e: Event) => {
-      console.log("input");
       let { value } = e.target as TargetElement;
       ctx.emit("input", value, e);
       ctx.emit("update:modelValue", value);
     };
     const handleChange = (e: Event) => {
-      console.log("change");
-
       const { value } = e.target as TargetElement;
       ctx.emit("change", value, e);
     };
     const handleFocus = (e: Event) => {
-      console.log("focus");
-
       const { value } = e.target as TargetElement;
       ctx.emit("focus", value, e);
     };

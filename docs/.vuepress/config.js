@@ -41,6 +41,8 @@ module.exports = {
   ],
 
   themeConfig: {
+    search: true,
+    searchMaxSuggestions: 10,
     logo: '/h-logo.png',
     repo: 'https://github.com/hunterxing/h-design.git',
     editLink: false,
@@ -69,7 +71,33 @@ module.exports = {
             '/components/basic/grid.md',
             '/components/basic/button.md'
           ]
-        }
+        },
+        {
+          text: '输入类',
+          children: [
+            '/components/input/input.md',
+          ]
+        },
+        {
+          text: '反馈类',
+          children: [
+          ]
+        },
+        {
+          text: '导航类',
+          children: [
+          ]
+        },
+        {
+          text: '展示类',
+          children: [
+          ]
+        },
+        {
+          text: '其他',
+          children: [
+          ]
+        },
       ]
     }
   }

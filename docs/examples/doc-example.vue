@@ -18,6 +18,7 @@
 import { reactive, watchEffect } from 'vue';
 import hljs from 'highlight.js/lib/core';
 import xml from 'highlight.js/lib/languages/xml';
+import "./../.vuepress/styles/index.css"
 hljs.registerLanguage('xml', xml);
 
 const props = defineProps({
