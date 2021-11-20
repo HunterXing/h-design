@@ -91,6 +91,7 @@ module.exports = {
         {
           text: '展示类',
           children: [
+            '/components/display/icon.md'
           ]
         },
         {
