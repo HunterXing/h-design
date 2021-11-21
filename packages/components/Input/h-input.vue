@@ -9,20 +9,26 @@
         <slot name="prepend"></slot>
       </span>
     </template>
-    <input
-      class="h-input"
-      autocomplete="off"
-      :value="modelValue"
-      :type="type"
-      :placeholder="placeholder"
-      :disabled="disabled"
-      :readonly="readonly"
-      @change="handleChange"
-      @input="handleInput"
-      @focus="handleFocus"
-      @blur="handleBlur"
-      @keypress="handleKeyPress"
-    />
+    <div class="h-input-template">
+      <input
+        class="h-input"
+        autocomplete="off"
+        :value="modelValue"
+        :type="type"
+        :placeholder="placeholder"
+        :disabled="disabled"
+        :readonly="readonly"
+        @change="handleChange"
+        @input="handleInput"
+        @focus="handleFocus"
+        @blur="handleBlur"
+        @keypress="handleKeyPress"
+      />
+      <template v-if="clearable && hasValue">
+        <i class="h-icon-x-circle" @click="clearValue"></i>
+      </template>
+    </div>
+
     <template v-if="$slots.append">
       <span class="h-input-group-text">
         <slot name="append"></slot>
@@ -38,7 +44,7 @@
       :placeholder="placeholder"
       :disabled="disabled"
       :readonly="readonly"
-      :style="{ height: height }"
+      :style="{ height }"
       @change="handleChange"
       @input="handleInput"
       @focus="handleFocus"
@@ -66,6 +72,7 @@ export default defineComponent({
     placeholder: { type: String, default: "" },
     disabled: { type: Boolean, default: false },
     readonly: { type: Boolean, default: false },
+    clearable: { type: Boolean, default: false },
     size: { type: String, default: "default" }, // input的大小
     height: { type: String, default: "80px" }, // textarea的高度
     allowE: { type: Boolean, default: false }, // 允许number类型时输入科学计算中的e,默认关闭
@@ -84,11 +91,15 @@ export default defineComponent({
     const inputClass = computed(() => ({
       [`h-input-group-${sizeClass[props.size]}`]: sizeClass[props.size],
     }));
+    const hasValue = computed(() => {
+      return props.modelValue.toString().length;
+    });
     // funcs
 
     // methods
     const handleInput = (e: Event) => {
       let { value } = e.target as TargetElement;
+
       ctx.emit("input", value, e);
       ctx.emit("update:modelValue", value);
     };
@@ -112,16 +123,24 @@ export default defineComponent({
         return false;
       }
     };
+    // 清空内容
+    const clearValue = () => {
+      ctx.emit("update:modelValue", "");
+      ctx.emit("clear");
+    };
 
     return {
       // datas
       inputClass,
+      hasValue,
       // methods
       handleChange,
       handleInput,
       handleFocus,
       handleBlur,
       handleKeyPress,
+
+      clearValue,
     };
   },
 });

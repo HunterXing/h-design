@@ -18,7 +18,7 @@ sidebarDepth: 0
 | `type`     | `String`  | 类型。可选 `textarea` `password` `text` | text |
 | `placeholder`     | `String`  | 占位文本 | - |
 | `size`     | `String`  | 大小。可选 `mini` `medium` `large` | medium |
-| `clearable`     | `Boolean`  | 可清除 | false (开发中)|
+| `clearable`     | `Boolean`  | 可清除 | false |
 | `height`     | `String`  | textarea的高度，只对type为textarea的有效 | -      |
 | `allowE`     | `Boolean`  | 是否允许number类型时输入科学计算中的e,默认关闭 | false     |
 
@@ -31,8 +31,7 @@ sidebarDepth: 0
 | `change` | `function(value:string, e:event)` | 失焦值改变                                            | - |
 | `input` | `function(value:string, e:event)` | 值改变                                            | - |
 | `blur` | `function(e:event)` | 加载状态                                                 | -  |
-| `clear` | `function(e:event)` | 清空值回调函数 | -     (开发中) |
 | `enter` | `function(e:event)` | 键盘enter                                  | -  |
 | `focus` | `function(e:event)` | 鼠标进入input                                    | -  |
 | `keypress` | `function(e:event)` | 键盘按下                                    | -  |
-
+| `clear` | `function(e:event)` | 清空值回调函数 | -   |

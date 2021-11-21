@@ -6,7 +6,12 @@
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
+   .h-input-template {
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
 
+   }
   .h-input {
     display: block;
     width: 100%;
@@ -24,6 +29,15 @@
     border-radius: $border-radius-md;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
+  .h-input {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+  }
+  .h-input:focus {
+    z-index: 3;
+  }
 
   .h-input-group-text {
     display: flex;
@@ -39,31 +53,38 @@
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
   }
-}
-.h-input-group > .h-input {
-  position: relative;
-  flex: 1 1 auto;
-  width: 1%;
-  min-width: 0;
-}
-.h-input-group > .h-input:focus {
-  z-index: 3;
+
+  .h-icon-x-circle {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    z-index: 100;
+    color: #969799;
+    cursor: pointer;
+  }
 }
 
-.h-input-group--lg > .h-input,
-.h-input-group--lg > .h-input-group-text {
-  padding:  $padding-base $padding-lg;
-  font-size: 1.25rem;
-  border-radius: $border-radius-lg;
+.h-input-group--lg {
+  .h-input, .h-input-group-text {
+    padding:  $padding-base $padding-lg;
+    font-size: 1.25rem;
+    border-radius: $border-radius-lg;
+  }
+  .h-icon-x-circle {
+    top: 9px;
+  }
 }
 
-.h-input-group--sm > .h-input,
-.h-input-group--sm > .h-input-group-text {
-  padding: $padding-base $padding-sm;
-  font-size: 0.875rem;
-  border-radius: $border-radius-sm;
+.h-input-group--sm {
+  .h-input, .h-input-group-text {
+    padding: $padding-base $padding-sm;
+    font-size: 0.875rem;
+    border-radius: $border-radius-sm;
+  }
+  .h-icon-x-circle {
+    top: 5px;
+  }
 }
-
 
 .input-textarea-wrap {
   width: 100%;
