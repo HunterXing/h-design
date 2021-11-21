@@ -22,7 +22,7 @@
       <h-row gutter-v="5px">
         <h-input
           v-model="value3"
-          type="number"
+          type="text"
           placeholder="请输入密码"
           @change="handleChange"
         >
@@ -78,7 +78,7 @@ const code = `
       <h-row gutter-v="5px">
         <h-input
           v-model="value3"
-          type="number"
+          type="text"
           placeholder="请输入密码"
           @change="handleChange"
         >
