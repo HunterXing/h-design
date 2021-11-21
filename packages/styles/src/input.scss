@@ -90,6 +90,7 @@
   width: 100%;
   textarea {
     border-color: $border-color;
+    padding: $padding-base $padding-xs;
     box-sizing: border-box;
     width: 100%;
   }

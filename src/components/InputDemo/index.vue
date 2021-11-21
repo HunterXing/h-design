@@ -1,18 +1,32 @@
 <template>
-  <hi-input placeholder="请输入密码" type="text" v-model="value1" clearable>
-    <template v-slot:prepend>Http://</template>
-    <template v-slot:append>
-      <i class="h-icon-clock"></i>
-    </template>
-  </hi-input>
-
-  <hi-input placeholder="请输入密码" type="textarea" v-model="value2" clearable height="200px">
-  </hi-input>
+  <h-row gutter-v="5px">
+    <h-col :span="8" gutter-h="5px">
+      <h-input v-model="name" type="text" placeholder="请输入姓名" @change="handleChange" clearable>
+        <template v-slot:prepend>姓名</template>
+      </h-input>
+    </h-col>
+    <h-col :span="2"></h-col>
+    <h-col :span="8" gutter-h="5px">
+      <h-input
+        v-model="address"
+        type="text"
+        placeholder="请输入网址"
+        @change="handleChange"
+        clearable
+      >
+        <template v-slot:prepend>http://</template>
+        <template v-slot:append>搜索</template>
+      </h-input>
+    </h-col>
+  </h-row>
 </template>
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import HiInput from "../../../packages/components/Input/h-input.vue";
-const value1 = ref()
-const value2 = ref()
+const name = ref();
+const address = ref();
+
+const handleChange = (e) => {
+  console.log(e);
+};
 </script>

@@ -4,9 +4,27 @@ sidebarDepth: 0
 ---
 
 ## Input 输入框
-
+### 基础用法
 <ClientOnly>
-  <doc-input/>
+  <doc-input-1/>
+</ClientOnly>
+
+### 可清除
+<ClientOnly>
+  <doc-input-2/>
+</ClientOnly>
+
+
+### textarea
+可使用 `height` 设置高度
+<ClientOnly>
+  <doc-input-3/>
+</ClientOnly>
+
+### 复合型输入框
+可前置或后置元素，一般为标签或按钮
+<ClientOnly>
+  <doc-input-4/>
 </ClientOnly>
 
 ### 组件属性
