@@ -81,6 +81,7 @@ module.exports = {
         {
           text: '反馈类',
           children: [
+            '/components/feedback/tip.md',
           ]
         },
         {

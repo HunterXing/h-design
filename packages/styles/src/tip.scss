@@ -1,3 +1,5 @@
+@import "./common/var.scss";
+
 .fade-enter-active {
   animation: tip-fade-in 0.2s;
 }
@@ -26,7 +28,6 @@
     opacity: 0;
   }
 }
-
 .message-content-wrap {
   position: absolute;
   top: 30px;
@@ -59,6 +60,18 @@
     }
     .h-icon-x {
       font-size: 20px;
+    }
+    .success-icon {
+      color: $success-color
+    }
+    .warning-icon {
+      color: $warning-color
+    }
+    .error-icon {
+      color: $danger-color
+    }
+    .info-icon {
+      color: $info-color
     }
   }
 }

@@ -35,13 +35,13 @@ export default defineComponent({
       if (!props.icon) {
         switch (props.type) {
           case "success":
-            return "h-icon-check-circle-fill";
+            return "h-icon-check-circle-fill success-icon";
           case "warning":
-            return "h-icon-exclamation-triangle-fill";
+            return "h-icon-exclamation-triangle-fill warning-icon";
           case "error":
-            return "h-icon-exclamation-circle-fill";
+            return "h-icon-x-circle-fill error-icon";
           case "info":
-            return "h-icon-info";
+            return "h-icon-info info-icon";
           default:
             return "h-icon-info-circle-fill";
         }
