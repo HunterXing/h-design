@@ -1,0 +1,66 @@
+.fade-enter-active {
+  animation: tip-fade-in 0.2s;
+}
+.fade-leave-active {
+  animation: tip-fade-out 0.2s;
+}
+
+@keyframes tip-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes tip-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}
+
+.message-content-wrap {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+
+  .message-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    min-width: 380px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 4px 14px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s linear;
+  
+    .message-text {
+      flex: 1 1 auto;
+    }
+    .message-icon {
+      margin-right: 5px;
+    }
+    .message-icon,
+    .message-icon-close {
+      width: 30px;
+      cursor: pointer;
+    }
+    .h-icon-x {
+      font-size: 20px;
+    }
+  }
+}
+
+

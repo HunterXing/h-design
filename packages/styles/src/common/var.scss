@@ -1,7 +1,7 @@
 /*
  * @description: 颜色主题变量
  * @Date: 2021-11-14 17:22:04
- * @LastEditTime: 2021-11-14 21:05:30
+ * @LastEditTime: 2021-11-23 15:44:03
  * @Author: xingheng
  */
 
@@ -84,6 +84,9 @@ $border-radius-sm: 2px;
 $border-radius-md: 4px;
 $border-radius-lg: 8px;
 $border-radius-max: 999px;
+
+// shadow
+$box-shadow-basic:  0 0 1px rgba(0, 0, 0, 0.3), 0 4px 14px rgba(0, 0, 0, 0.1);
 
 // z-index
 $z-index-xs: 100;
