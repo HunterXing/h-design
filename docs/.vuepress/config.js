@@ -1,6 +1,5 @@
 const { path } = require('@vuepress/utils');
 
-const isProduction = process.env.NODE_ENV === 'production';
 const base = process.env.BUILD_ENV ? process.env.BUILD_ENV : '/';
 
 module.exports = {

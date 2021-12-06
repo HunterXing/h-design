@@ -25,7 +25,7 @@ yarn doc:dev
 - [x]  button 按钮组件
 - [x]  row/col 布局组件
 
-#### 输入/选择组件
+#### 输入类
 - [x]  input
 - [ ]  select
 - [ ]  form
@@ -47,6 +47,13 @@ yarn doc:dev
 - [x] tip
 - [ ] banner
 - [ ] natification
+
+#### 展示类
+- [x] icon
+
+#### 其他
+- [x] icon
+
 
 ... 等等等 🎯
 

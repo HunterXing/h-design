@@ -3,6 +3,7 @@
   <button-demo></button-demo>
   <input-demo> </input-demo>
   <h-button @click="showTip">点击</h-button>
+  <h-icon icon="h-icon-apple"></h-icon>
 </template>
 
 <script lang="ts" setup>
@@ -10,6 +11,7 @@ import GridDemo from "@/components/GridDemo/index.vue";
 import ButtonDemo from "@/components/ButtonDemo/index.vue";
 import InputDemo from "@/components/InputDemo/index.vue";
 import HTip from "../lib/h-tip";
+import HIcon from "../lib/h-icon";
 const showTip = () => {
   HTip({
     message: "你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好",

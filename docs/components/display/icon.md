@@ -11,5 +11,10 @@ sidebarDepth: 0
 
 ## 使用方式
 ```vue
+<h-icon icon="h-icon-yin-yang"></h-icon>
+```
+或
+```vue
 <i class="h-icon-yin-yang"></i>
 ```
+
