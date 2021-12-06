@@ -1,8 +1,7 @@
 import Vue from "vue";
 const { h } = Vue;
 
-const HIcon = {
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+const HIcon: Vue.Component<any, any, any, Vue.ComputedOptions, Vue.MethodOptions> = {
   render() {
     return h(
       "i", // 标签名称
