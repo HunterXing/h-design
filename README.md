@@ -29,7 +29,8 @@ yarn doc:dev
 - [x]  input
 - [ ]  select
 - [ ]  form
-- [ ]  radio
+- [x]  radio
+- [x]  radio-group
 - [ ]  checkbox
 - [ ]  switch
 - [ ]  star
