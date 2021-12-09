@@ -56,7 +56,6 @@ export default defineComponent({
     // hooks
     onMounted(() => {
       visible.value = true;
-      // console.log(getCurrentInstance());
       // 如果continued不是0， 组件存在规定时间continued毫秒后进行卸载
       if (props.continued !== 0) {
         timer.value = setTimeout(() => {

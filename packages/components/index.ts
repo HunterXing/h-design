@@ -4,6 +4,8 @@ import HCol from "./Col/index";
 import HInput from "./Input/index";
 import HTip from "./Tip/index";
 import HIcon from "./Icon/index";
+import HRadio from "./Radio/index";
+import HRadioGroup from "./RadioGroup/index";
 import { DefineComponent } from "vue";
 
 const components = {
@@ -13,6 +15,8 @@ const components = {
   HInput,
   HTip,
   HIcon,
+  HRadio,
+  HRadioGroup,
 };
 
 const install = (Vue: DefineComponent): void => {
@@ -24,6 +28,6 @@ const install = (Vue: DefineComponent): void => {
 };
 
 const HDesign = { install };
-export { install, HButton, HRow, HCol, HInput, HTip, HIcon };
+export { install, HButton, HRow, HCol, HInput, HTip, HIcon, HRadio, HRadioGroup };
 
 export default HDesign;
