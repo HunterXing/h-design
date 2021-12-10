@@ -75,6 +75,7 @@ module.exports = {
           text: '输入类',
           children: [
             '/components/input/input.md',
+            '/components/input/radio.md',
           ]
         },
         {
