@@ -77,10 +77,6 @@ export default defineComponent({
     height: { type: String, default: "80px" }, // textarea的高度
     allowE: { type: Boolean, default: false }, // 允许number类型时输入科学计算中的e,默认关闭
   },
-  model: {
-    prop: "value", //绑定的值，通过父组件传递
-    event: "change",
-  },
   setup(props, ctx) {
     const sizeClass = {
       small: "-sm",

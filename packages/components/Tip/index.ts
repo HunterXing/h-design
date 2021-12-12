@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import TipComponent from "./h-tip.vue";
 export interface TipProps {
-  message?: string;
+  message: string;
   type?: "normal";
   icon?: string;
   continued?: number;
@@ -12,7 +12,7 @@ const HTip = ({ message, type, icon, continued, showClose }: TipProps): any => {
     const domId = "tip-" + new Date().getTime();
     // 实例化组件，createApp第二个参数是props
     const TipInstance = createApp(TipComponent, {
-      message: message,
+      message,
       type,
       icon,
       continued,
