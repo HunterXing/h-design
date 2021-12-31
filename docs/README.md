@@ -43,7 +43,7 @@ app.use(HDesign)
 
 ```js
 import { HButton } from 'h-design';
-import 'h-design/lib/styles/h-button.css';
+import 'h-design/lib/styles/index.css';
 export default {
   components: { HButton }
 };

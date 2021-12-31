@@ -1,3 +1,15 @@
 .theme-default-content {
   max-width: 1000px !important;
 }
+.navbar {
+  position: sticky;
+}
+table {
+  border: 1px solid #dddddd;
+  display: table;
+  width: 100%;
+}
+td {
+  border: 1px solid #dddddd;
+  background: #fff;
+}

@@ -5,6 +5,8 @@ import HInput from "./Input/index";
 import HTip from "./Tip/index";
 import HIcon from "./Icon/index";
 import HRadio from "./Radio/index";
+import HCheckbox from "./Checkbox/index";
+import HCheckboxGroup from "./CheckboxGroup/index";
 import HRadioGroup from "./RadioGroup/index";
 import { DefineComponent } from "vue";
 
@@ -17,6 +19,8 @@ const components = {
   HIcon,
   HRadio,
   HRadioGroup,
+  HCheckbox,
+  HCheckboxGroup,
 };
 
 const install = (Vue: DefineComponent): void => {
@@ -28,6 +32,18 @@ const install = (Vue: DefineComponent): void => {
 };
 
 const HDesign = { install };
-export { install, HButton, HRow, HCol, HInput, HTip, HIcon, HRadio, HRadioGroup };
+export {
+  install,
+  HButton,
+  HRow,
+  HCol,
+  HInput,
+  HTip,
+  HIcon,
+  HRadio,
+  HRadioGroup,
+  HCheckboxGroup,
+  HCheckbox,
+};
 
 export default HDesign;

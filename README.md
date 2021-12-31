@@ -31,7 +31,8 @@ yarn doc:dev
 - [ ]  form
 - [x]  radio
 - [x]  radio-group
-- [ ]  checkbox
+- [x]  checkbox
+- [x]  checkbox-group
 - [ ]  switch
 - [ ]  star
 - [ ]  upload
