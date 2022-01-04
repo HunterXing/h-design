@@ -1,7 +1,7 @@
 <!--
  * @description: demo
  * @Date: 2021-11-18 17:10:35
- * @LastEditTime: 2022-01-04 16:57:44
+ * @LastEditTime: 2022-01-04 19:17:33
  * @Author: xingheng
 -->
 <template>
@@ -43,8 +43,8 @@
 import GridDemo from "@/components/GridDemo/index.vue";
 import ButtonDemo from "@/components/ButtonDemo/index.vue";
 import InputDemo from "@/components/InputDemo/index.vue";
-import HRadio from "@/components/RadioDemo/index.vue";
-import HRadioGroup from "@/components/RadioDemo/radio-group.vue";
+import HRadio from "../lib/h-radio";
+import HRadioGroup from "../lib/h-radio-group";
 import HTip from "../lib/h-tip";
 import HIcon from "../lib/h-icon";
 // import CheckboxDemo from "@/components/CheckboxDemo/checkbox.vue";

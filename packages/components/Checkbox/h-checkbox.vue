@@ -9,13 +9,13 @@
     <input
       class="form-check-input"
       type="checkbox"
-      :id="`${value}`"
+      :id="`${value}-${new Date().getTime()}`"
       :value="value"
       :disabled="disabled"
       :checked="checked"
       @change="handleChange"
     />
-    <label class="form-check-label" :for="`${value}`">{{ label }}</label>
+    <label class="form-check-label" :for="`${value}-${new Date().getTime()}`">{{ label }}</label>
   </div>
 </template>
 

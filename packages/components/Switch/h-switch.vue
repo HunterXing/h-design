@@ -11,13 +11,13 @@
       class="form-check-input"
       type="checkbox"
       role="switch"
-      :id="`${label}`"
+      :id="`${label}-${new Date().getTime()}`"
       :disabled="disabled"
       :checked="switchChecked"
       @change="handleChange"
       :value="modelValue"
     />
-    <label class="form-check-label" :for="`${label}`">{{ label }}</label>
+    <label class="form-check-label" :for="`${label}-${new Date().getTime()}`">{{ label }}</label>
   </div>
 </template>
 

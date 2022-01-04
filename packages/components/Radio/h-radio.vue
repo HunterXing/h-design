@@ -7,9 +7,9 @@
       :disabled="disabled"
       :checked="checked"
       :name="`${name}`"
-      :id="`${value}`"
+      :id="`${value}-${new Date().getTime()}`"
     />
-    <label class="h-radio-label" :for="`${value}`">{{ label }}</label>
+    <label class="h-radio-label" :for="`${value}-${new Date().getTime()}`">{{ label }}</label>
   </div>
 </template>
 
