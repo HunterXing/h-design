@@ -77,6 +77,7 @@ module.exports = {
             '/components/input/input.md',
             '/components/input/radio.md',
             '/components/input/checkbox.md',
+            '/components/input/switch.md',
           ]
         },
         {
