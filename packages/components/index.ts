@@ -8,6 +8,7 @@ import HRadio from "./Radio/index";
 import HCheckbox from "./Checkbox/index";
 import HCheckboxGroup from "./CheckboxGroup/index";
 import HRadioGroup from "./RadioGroup/index";
+import HSwitch from "./Switch/index";
 import { DefineComponent } from "vue";
 
 const components = {
@@ -21,6 +22,7 @@ const components = {
   HRadioGroup,
   HCheckbox,
   HCheckboxGroup,
+  HSwitch,
 };
 
 const install = (Vue: DefineComponent): void => {
@@ -44,6 +46,7 @@ export {
   HRadioGroup,
   HCheckboxGroup,
   HCheckbox,
+  HSwitch,
 };
 
 export default HDesign;

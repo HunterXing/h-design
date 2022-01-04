@@ -33,7 +33,7 @@ yarn doc:dev
 - [x]  radio-group
 - [x]  checkbox
 - [x]  checkbox-group
-- [ ]  switch
+- [x]  switch
 - [ ]  star
 - [ ]  upload
 
