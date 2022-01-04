@@ -1,7 +1,7 @@
 <!--
  * @description: demo
  * @Date: 2021-11-18 17:10:35
- * @LastEditTime: 2022-01-04 14:30:52
+ * @LastEditTime: 2022-01-04 16:57:44
  * @Author: xingheng
 -->
 <template>
@@ -35,6 +35,7 @@
       switchValue: '1',
       unSwitchValue: '0',
     }"
+    @change="changeSwitch"
   ></h-switch>
 </template>
 
@@ -49,7 +50,7 @@ import HIcon from "../lib/h-icon";
 // import CheckboxDemo from "@/components/CheckboxDemo/checkbox.vue";
 import HCheckbox from "../lib/h-checkbox";
 import HCheckboxGroup from "../lib/h-checkbox-group";
-import HSwitch from "@/components/SwitchDemo/h-switch.vue";
+import HSwitch from "../lib/h-switch";
 import { ref } from "vue";
 
 const radioValue = ref("3");
@@ -64,6 +65,9 @@ const showTip = () => {
   });
 };
 const handleCheckboxChange = (value) => {
+  console.log(value);
+};
+const changeSwitch = (value) => {
   console.log(value);
 };
 </script>
