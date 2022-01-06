@@ -1,7 +1,7 @@
 <!--
  * @description: demo
  * @Date: 2021-11-18 17:10:35
- * @LastEditTime: 2022-01-04 19:17:33
+ * @LastEditTime: 2022-01-05 17:24:52
  * @Author: xingheng
 -->
 <template>
@@ -37,6 +37,8 @@
     }"
     @change="changeSwitch"
   ></h-switch>
+  <h2>表格 table</h2>
+  <h-table :table-data="tableData" :columns="columns"> </h-table>
 </template>
 
 <script lang="ts" setup>
@@ -51,11 +53,58 @@ import HIcon from "../lib/h-icon";
 import HCheckbox from "../lib/h-checkbox";
 import HCheckboxGroup from "../lib/h-checkbox-group";
 import HSwitch from "../lib/h-switch";
+import HTable from "@/components/TableDemo/h-table.vue";
 import { ref } from "vue";
 
 const radioValue = ref("3");
 const checkBoxValue = ref(["1", "2"]);
 const valueSwitch = ref("1");
+const tableData = ref([
+  {
+    key: "1",
+    name: "Semi Design 设计稿.fig",
+    nameIconSrc:
+      "https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/figma-icon.png",
+    size: "2M",
+    owner: "姜鹏志",
+    updateTime: "2020-02-02 05:13",
+    avatarBg: "grey",
+  },
+  {
+    key: "2",
+    name: "Semi Design 分享演示文稿",
+    nameIconSrc:
+      "https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/docs-icon.png",
+    size: "2M",
+    owner: "郝宣",
+    updateTime: "2020-01-17 05:31",
+    avatarBg: "red",
+  },
+  {
+    key: "3",
+    name: "设计文档",
+    nameIconSrc:
+      "https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/docs-icon.png",
+    size: "34KB",
+    owner: "Zoey Edwards",
+    updateTime: "2020-01-26 11:01",
+    avatarBg: "light-blue",
+  },
+]);
+const columns = ref([
+  {
+    title: "标题",
+    dataSet: "name",
+  },
+  {
+    title: "归属者",
+    dataSet: "owner",
+  },
+  {
+    title: "更新时间",
+    dataSet: "updateTime",
+  },
+]);
 const showTip = () => {
   HTip({
     message: "你好你好你好",
