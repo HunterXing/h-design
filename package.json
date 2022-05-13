@@ -26,13 +26,14 @@
   "scripts": {
     "installall": "npm install && cd docs/ && npm install && cd ../packages/styles && npm install",
     "serve": "vue-cli-service serve",
-    "lib": "rm -rf es && rm -rf lib && rollup -c && npm run lib:css",
+    "lib": "rm -rf es && rm -rf lib && rollup -c && npm run lib:css && npm run changelog",
     "lib:css": "cd packages/styles && npm run build",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "docs:dev": "cd docs/ && npm run docs:dev",
     "docs:build": "cd docs/ && npm run docs:build",
-    "deploy": "npm run lib && npm publish && cd docs/ && npm run docs:deploy"
+    "deploy": "npm run lib && npm publish && cd docs/ && npm run docs:deploy",
+    "log": "gulp log"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -55,10 +56,15 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "babel-eslint": "^10.1.0",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
+    "gulp": "^4.0.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
     "prettier": "^2.2.1",
     "rollup": "^2.57.0",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -71,5 +77,16 @@
     "tslib": "^1.14.1",
     "typescript": "^4.4.4",
     "uglifyjs-webpack-plugin": "^2.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged & jest -u"
+    }
+  },
+  "lint-staged": {
+    "*.{.ts,.js}": [
+      "eslint",
+      "git add"
+    ]
   }
 }

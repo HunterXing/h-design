@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps } from "vue";
+import { computed } from "vue";
 
 const props = defineProps({
   gutterH: { type: String, default: "0" }, // 水平栅格间隔

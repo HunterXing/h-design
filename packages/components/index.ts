@@ -33,20 +33,6 @@ const install = (Vue: DefineComponent): void => {
   });
 };
 
-const HDesign = { install };
-export {
-  install,
-  HButton,
-  HRow,
-  HCol,
-  HInput,
-  HTip,
-  HIcon,
-  HRadio,
-  HRadioGroup,
-  HCheckboxGroup,
-  HCheckbox,
-  HSwitch,
-};
+const HDesign = { install, ...components };
 
 export default HDesign;

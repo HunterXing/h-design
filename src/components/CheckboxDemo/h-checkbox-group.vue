@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits, getCurrentInstance, onMounted } from "vue";
+import { getCurrentInstance, onMounted } from "vue";
 const props = defineProps({
   inline: { type: Boolean, default: false },
   modelValue: { type: Array, default: () => [] },

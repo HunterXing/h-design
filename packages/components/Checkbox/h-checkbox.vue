@@ -20,7 +20,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits } from "vue";
 defineProps({
   inline: { type: Boolean, default: false },
   disabled: { type: Boolean, default: false },

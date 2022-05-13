@@ -2,6 +2,7 @@
   "compilerOptions": {
     "lib": ["es6", "dom"],
     "module": "esnext",
+    "outDir": "./lib",
     "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -12,6 +13,6 @@
       "node_modules/@types"
     ]
   },
-  "exclude": ["node_modules/**"],
-  "include": ["packages/components/**/*", "src/**/*","vue-shim.d.ts"],
+  "exclude": ["node_modules/**", "./lib/**/*" ],
+  "include": ["packages/components/**/*", "src/**/*","vue-shim.d.ts", "typings/vue-shim.d.ts"],
 }
