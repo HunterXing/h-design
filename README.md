@@ -48,7 +48,7 @@ yarn doc:dev
 - [ ] alert
 - [x] tip
 - [ ] banner
-- [ ] natification
+- [ ] notification
 
 #### 展示类
 - [x] icon
