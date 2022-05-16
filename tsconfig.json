@@ -9,10 +9,11 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
+    "declaration": true,
     "typeRoots": [
       "node_modules/@types"
     ]
   },
   "exclude": ["node_modules/**", "./lib/**/*" ],
-  "include": ["packages/components/**/*", "src/**/*","vue-shim.d.ts", "typings/vue-shim.d.ts"],
+  "include": ["packages/components/**/*", "packages/typings","src/**/*","vue-shim.d.ts", "packages/typings/vue-shim.d.ts"],
 }

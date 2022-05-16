@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import { PropType, onMounted, computed } from "vue";
-interface valueFormatProps {
+export interface valueFormatProps {
   switchValue: string | number | boolean;
   unSwitchValue: string | number | boolean;
 }

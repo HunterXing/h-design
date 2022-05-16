@@ -1,6 +1,7 @@
 // GlobalComponents for Volar
 declare module "vue" {
   export interface GlobalComponents {
+    HDesign: typeof import("h-design");
     HButton: typeof import("h-design")["HButton"];
     HRow: typeof import("h-design")["HRow"];
     HCol: typeof import("h-design")["HCol"];

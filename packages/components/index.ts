@@ -1,15 +1,15 @@
+import { DefineComponent } from "vue";
 import HButton from "./Button/index";
-import HRow from "./Row/index";
-import HCol from "./Col/index";
-import HInput from "./Input/index";
-import HTip from "./Tip/index";
-import HIcon from "./Icon/index";
-import HRadio from "./Radio/index";
 import HCheckbox from "./Checkbox/index";
 import HCheckboxGroup from "./CheckboxGroup/index";
+import HCol from "./Col/index";
+import HIcon from "./Icon/index";
+import HInput from "./Input/index";
+import HRadio from "./Radio/index";
 import HRadioGroup from "./RadioGroup/index";
+import HRow from "./Row/index";
 import HSwitch from "./Switch/index";
-import { DefineComponent } from "vue";
+import HTip from "./Tip/index";
 
 const components = {
   HButton,

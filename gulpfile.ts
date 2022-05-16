@@ -16,11 +16,11 @@ const sass = gulpSass(dartSass);
 const distFolder = "./lib/styles";
 
 /**
- * compile styles scss & minify
+ * compile styles scss & minify & copy css to lib/styles
  * not use sass.sync().on('error', sass.logError) to throw exception
  * @returns
  */
-function compile() {
+function compileAndCopyCssToLib() {
   return gulp
     .src("./packages/styles/src/*.scss")
     .pipe(sass.sync())
@@ -50,16 +50,10 @@ function compile() {
  * copy font to lib/fonts
  * @returns
  */
-function copyFont() {
-  return gulp.src("./styles/src/fonts/**").pipe(gulp.dest(`${distFolder}/fonts`));
+function copyFontToLib() {
+  return gulp.src("./packages/styles/src/fonts/**").pipe(gulp.dest(`${distFolder}/fonts`));
 }
 
-/**
- * copy to packages/lib/styles
- */
-function copyToLib() {
-  return gulp.src(`${distFolder}/**`).pipe(gulp.dest(path.resolve(__dirname, "../../lib/styles")));
-}
 /*
  * changelog 自动生成
  */
@@ -84,7 +78,7 @@ async function changelog(cb) {
     cb();
   });
 }
-const build = gulp.series(compile, copyFont, copyToLib);
+const build = gulp.series(compileAndCopyCssToLib, copyFontToLib);
 const log = gulp.series(changelog);
 
 exports.default = build;

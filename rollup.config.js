@@ -34,14 +34,9 @@ export default inputs.map((com) => ({
     {
       name: com.name,
       file: `lib/${com.name}.js`,
-      format: 'cjs', //  输出格式：amd / esm / iife / umd / cjs / system
-      exports: 'named',
-    },
-    {
-      name: com.name,
-      file: `es/${com.name}.js`,
-      format: 'esm',
-    },
+      format: 'umd', //  输出格式：amd / esm / iife / umd / cjs / system
+      exports: 'named'
+    }
   ],
   plugins: [
     scss(),
