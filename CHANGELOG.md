@@ -1,10 +1,12 @@
 # h-design更新日志
 
-## 0.4.3 (2022-05-16)
+## 0.4.4 (2022-05-22)
 
 
 ### Bug Fixes
 
+* 更新文档地址 ([6373083](https://github.com/HunterXing/h-design/commit/637308336b5bed3c3be9a91450c32f0b0e5b9539))
+* 修复包抱错export 'default' (imported as 'e') was not found in vue的问题 ([0dfb592](https://github.com/HunterXing/h-design/commit/0dfb59276062069027ea2f6e4b843539779766b2))
 * input的label for id选中问题 ([18f90be](https://github.com/HunterXing/h-design/commit/18f90be56eb295368b60b2ed38972b6e01df4388))
 * tip必填项修改 ([0e8c4d4](https://github.com/HunterXing/h-design/commit/0e8c4d4dc3e7db0e88a1ae83715033e332f290bd))
 
