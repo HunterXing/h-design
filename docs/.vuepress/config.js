@@ -3,7 +3,7 @@ const { path } = require('@vuepress/utils');
 const base = process.env.BUILD_ENV ? process.env.BUILD_ENV : '/';
 
 module.exports = {
-  base: base,
+  base: '/hdesign/',
   dest: path.resolve(__dirname, './dist'),
   lang: 'zh-CN',
   title: 'h-design',
@@ -53,7 +53,7 @@ module.exports = {
         link: '/components/basic/grid',
         activeMatch: '/components/'
       },
-      { text: '邢走在云端', link: 'https://xingheng.gitee.io/' }
+      { text: '邢走在云端', link: 'http://notfound404.cn/notes/' }
     ],
 
     sidebar: {

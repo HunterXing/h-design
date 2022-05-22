@@ -1,6 +1,6 @@
 {
   "name": "h-design",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "private": false,
   "main": "lib/h-design.js",
   "style": "lib/styles/index.css",
@@ -32,6 +32,7 @@
     "lint": "vue-cli-service lint",
     "docs:dev": "cd docs/ && npm run docs:dev",
     "docs:build": "cd docs/ && npm run docs:build",
+    "docs:deploy": "cd docs/ && npm run docs:deploy",
     "deploy": "npm run lib && npm publish && cd docs/ && npm run docs:deploy",
     "log": "gulp log"
   },

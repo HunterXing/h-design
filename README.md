@@ -7,7 +7,7 @@
 ## 组件文档
 
 ### 线上文档
-[线上文档地址](http://notfound404.cn:8000/)
+[线上文档地址](http://notfound404.cn/hdesign)
 ### 本地文档
 ```
 npm run docs:dev

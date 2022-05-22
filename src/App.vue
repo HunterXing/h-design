@@ -1,7 +1,7 @@
 <!--
  * @description: demo
  * @Date: 2021-11-18 17:10:35
- * @LastEditTime: 2022-05-16 13:44:48
+ * @LastEditTime: 2022-05-16 17:48:18
  * @Author: xingheng
 -->
 <template>
@@ -42,18 +42,18 @@
 </template>
 
 <script lang="ts" setup>
-// import GridDemo from "@/components/GridDemo/index.vue";
-// import ButtonDemo from "@/components/ButtonDemo/index.vue";
-// import InputDemo from "@/components/InputDemo/index.vue";
-// import HRadio from "../lib/h-radio";
-// import HRadioGroup from "../lib/h-radio-group";
+import GridDemo from "@/components/GridDemo/index.vue";
+import ButtonDemo from "@/components/ButtonDemo/index.vue";
+import InputDemo from "@/components/InputDemo/index.vue";
+import HRadio from "../lib/h-radio";
+import HRadioGroup from "../lib/h-radio-group";
 import HTip from "../lib/h-tip";
-// import HIcon from "../lib/h-icon";
-// // import CheckboxDemo from "@/components/CheckboxDemo/checkbox.vue";
-// import HCheckbox from "../lib/h-checkbox";
-// import HCheckboxGroup from "../lib/h-checkbox-group";
-// import HSwitch from "../lib/h-switch";
-// import HTable from "@/components/TableDemo/h-table.vue";
+import HIcon from "../lib/h-icon";
+// import CheckboxDemo from "@/components/CheckboxDemo/checkbox.vue";
+import HCheckbox from "../lib/h-checkbox";
+import HCheckboxGroup from "../lib/h-checkbox-group";
+import HSwitch from "../lib/h-switch";
+import HTable from "@/components/TableDemo/h-table.vue";
 import { ref } from "vue";
 
 const radioValue = ref("3");
