@@ -1,13 +1,12 @@
 {
   "name": "h-design",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "private": false,
   "main": "lib/h-design.js",
   "style": "lib/styles/index.css",
   "types": "lib/typings/h-design.d.ts",
   "files": [
     "lib",
-    "es",
     "packages"
   ],
   "publisher": "xingheng@tom.com",
@@ -38,7 +37,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "h-design": "^0.4.3",
     "vue": "^3.2.0"
   },
   "peerDependencies": {
