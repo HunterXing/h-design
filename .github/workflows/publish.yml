@@ -14,13 +14,13 @@ jobs:
       - uses: actions/checkout@master
       - name: Install and Build 
         run: |
-          npm install
+          npm run installall
           npm run lib
 
       - name: 'Publish to the npm registry'
         uses: primer/publish@3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           default_branch: 'master'
