@@ -20,7 +20,7 @@ jobs:
       - name: Install and Build 
         run: |
           npm run installall
-          npm run lib
+          npm run build:lib
 
       - name: 'Publish to the npm registry'
         uses: primer/publish@3.0.0

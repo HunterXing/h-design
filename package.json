@@ -28,6 +28,7 @@
     "lib": "rm -rf es && rm -rf lib && rollup -c && npm run lib:css && npm run log",
     "lib:css": "gulp build",
     "build": "vue-cli-service build",
+    "build:lib": "rollup -c && npm run lib:css",
     "lint": "vue-cli-service lint",
     "docs:dev": "cd docs/ && npm run docs:dev",
     "docs:build": "cd docs/ && npm run docs:build",
