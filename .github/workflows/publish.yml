@@ -20,8 +20,8 @@ jobs:
         node-version: v12.22.1
     # 安装依赖
     - name: Install
-      run: npm install
-      
+      run: npm run installall
+
     # 打包
     - name: Build
       run: npm run lib
