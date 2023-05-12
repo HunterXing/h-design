@@ -1,6 +1,6 @@
 {
   "name": "h-design",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "private": false,
   "main": "lib/h-design.js",
   "style": "lib/styles/index.css",

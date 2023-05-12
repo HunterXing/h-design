@@ -5,27 +5,26 @@ on:
     branches: [ master ]
 
 jobs:
-  publish:
+  build-and-publish:
     runs-on: ubuntu-latest
-    name: 'publish npm'
-    environment: npm
 
     steps:
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
+    - name: Checkout
+      uses: actions/checkout@v3
 
-      - uses: actions/checkout@master
-      - name: Install and Build 
-        run: |
-          npm run installall
-          npm run build:lib
 
-      - name: 'Publish to the npm registry'
-        uses: primer/publish@3.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          default_branch: 'master'
+    # 使用 nodejs 的版本
+    - name: Use Node.js v12.22.1
+      uses: actions/setup-node@v3
+      with:
+        node-version: v12.22.1
+
+    # 打包
+    - name: Build
+      run: npm run lib
+
+    # 发布
+    - name: Publish
+      uses: JS-DevTools/npm-publish@v2
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
