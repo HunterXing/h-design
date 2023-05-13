@@ -70,6 +70,7 @@
     "gulp-sass": "^5.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
+    "esbuild": "^0.17.19",
     "prettier": "^2.2.1",
     "rollup": "^2.57.0",
     "rollup-plugin-commonjs": "^10.1.0",
