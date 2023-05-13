@@ -14,10 +14,10 @@ jobs:
 
 
     # 使用 nodejs 的版本
-    - name: Use Node.js v12.22.1
+    - name: Use Node.js v16.11.0
       uses: actions/setup-node@v3
       with:
-        node-version: v12.22.1
+        node-version: v16.11.0
     # 安装依赖
     - name: Install
       run: npm run installall
