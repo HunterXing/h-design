@@ -18,9 +18,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: v16.11.0
+
     # 安装依赖
     - name: Install
-      run: npm run installall
+      run: npm install
 
     # 打包
     - name: Build
